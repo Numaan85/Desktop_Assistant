@@ -1,14 +1,14 @@
-import webbrowser
-import pyttsx3
-import datetime
-import speech_recognition as sr
-import wikipedia
-import os
+import webbrowser  #Module use for access web application
+import pyttsx3     #Module use to convert text into speech
+import datetime    #Module use for date and time
+import speech_recognition as sr    #Module use for recognizing speech
+import wikipedia     #Module use for acess wikipedia
+import os            #Module use for access os application
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # engine.setProperty(voice,voice[0].id)
-def speak(audio):
+def speak(audio):    #It is a speak function that speak text
     engine.say(audio)
     engine.runAndWait()
 def wishme():
@@ -21,7 +21,7 @@ def wishme():
         speak("Good Morning")
     speak("How may I hep you Sir")
 
-def takeCommand():
+def takeCommand():    #This function is for taking command
 
     r=sr.Recognizer()
     with sr.Microphone() as source:
